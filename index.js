@@ -23,16 +23,19 @@ function viewCart() {
   else {
       var output = "In your cart, you have ";
       for (var i=0; i<cart.length; i++) { 
+        
         if(cart.length === 1) {
          output += `${cart[i].itemName} at $${cart[i].itemPrice}.`;
           }
-        else if(i === cart.length-1) {
           
+        else if(i === cart.length-1) {
            output += `and ${cart[i].itemName} at $${cart[i].itemPrice}.`;
           }
+          
         else {
           output += `${cart[i].itemName} at $${cart[i].itemPrice}, `;
           }
+          
         }
       return output;
     }
